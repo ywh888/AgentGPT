@@ -1,5 +1,4 @@
 import React from "react";
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import Dialog from "./Dialog";
 
 export default function HelpDialog({
@@ -9,53 +8,32 @@ export default function HelpDialog({
   show: boolean;
   close: () => void;
 }) {
+  const qrcodeUrl =
+    "https://ai.aiomni.top/addons/wike_chatgpt/public/static/storage/20230420/e2c81c1e1fcef6c1874cf1313492a233.jpg";
+
   return (
-    <Dialog header="Welcome to AgentGPT 🤖" isShown={show} close={close}>
+    <Dialog header="Auto-GPT 无限可能性的人工智能程序 🤖" isShown={show} close={close}>
       <div className="text-md relative flex-auto p-2 leading-relaxed">
         <p>
-          <strong>AgentGPT</strong> allows you to configure and deploy
-          Autonomous AI agents. Name your custom AI and have it embark on any
-          goal imaginable. It will attempt to reach the goal by thinking of
-          tasks to do, executing them, and learning from the results 🚀
+          Auto-GPT 是一个展示了人工智能无限可能性的程序，它可以帮你完成各种任务，包括写商业项目、专业高质量文案输出、设计网站、发现流行话题和更多。Auto-GPT 可以访问互联网上的数据，具有长期和短期记忆，使用 GPT-4 或 GPT-3.5 生成高质量的文本，并且可以存储和总结文件。使用 Auto-GPT，您可以更高效地完成工作和学习，并且获得最新的信息和趋势。！📲
         </p>
-        <div>
-          <br />
-          This platform is currently in beta, we are currently working on:
-          <ul className="ml-5 list-inside list-disc">
-            <li>Long term memory 🧠</li>
-            <li>Web browsing 🌐</li>
-            <li>Interaction with websites and people 👨‍👩‍👦</li>
-          </ul>
-          <br />
-          <p className="mt-2">Follow the journey below:</p>
-        </div>
+        <p className="mt-2">
+          关注微信公众号：
+          <a href="https://ai.aiomni.top/addons/wike_chatgpt/public/static/storage/20230420/e2c81c1e1fcef6c1874cf1313492a233.jpg">
+            洛林AI互联
+          </a>
+        </p>
         <div className="mt-4 flex w-full items-center justify-center gap-5">
-          <div
-            className="cursor-pointer rounded-full bg-black/30 p-3 hover:bg-black/70"
-            onClick={() =>
-              window.open("https://discord.gg/jdSBAnmdnY", "_blank")
-            }
-          >
-            <FaDiscord size={30} />
-          </div>
-          <div
-            className="cursor-pointer rounded-full bg-black/30 p-3 hover:bg-black/70"
-            onClick={() =>
-              window.open(
-                "https://twitter.com/asimdotshrestha/status/1644883727707959296",
-                "_blank"
-              )
-            }
-          >
-            <FaTwitter size={30} />
-          </div>
-          <div
-            className="cursor-pointer rounded-full bg-black/30 p-3 hover:bg-black/70"
-            onClick={() =>
-              window.open("https://github.com/reworkd/AgentGPT", "_blank")
-            }
-          >
-            <FaGithub size={30} />
+          <div className="relative cursor-pointer">
+            <img
+              src={qrcodeUrl}
+              alt="洛林AI互联"
+              width={100}
+              height={100}
+            />
+            <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-sm font-medium text-center">
+              关注我们的微信公众号
+            </p>
           </div>
         </div>
       </div>
